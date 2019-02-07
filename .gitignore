@@ -1,0 +1,9 @@
+**/.vs/
+**/bin
+**/obj
+**/*.csproj.user
+**/node_modules
+**/wwwroot
+**/appsettings.dev.json
+/TrafficComet.Splunk.LogWriter/obj
+/TrafficComet.Splunk.LogWriter/bin
