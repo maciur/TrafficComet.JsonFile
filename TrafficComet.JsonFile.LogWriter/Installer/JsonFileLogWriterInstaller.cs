@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using TrafficComet.Abstracts.Consts;
 using TrafficComet.Abstracts.Writers;
+using TrafficComet.Core;
 using TrafficComet.JsonFile.LogWriter.Abstracts.Configurations;
 using TrafficComet.JsonFile.LogWriter.Configs;
 using TrafficComet.JsonFile.LogWriter.Writers;
@@ -13,6 +14,8 @@ namespace TrafficComet.JsonFile.LogWriter.Installer
 	{
 		public static IServiceCollection AddTrafficCometJsonFileLogWriter(this IServiceCollection services, IConfiguration configuration)
 		{
+			services.AddTrafficComet(configuration);
+
 			services.Configure<JsonFileLogWriterConfig>(configuration
 				.GetSection($"{ConfigurationSelectors.ROOT}:{ConfigurationSelectors.WRITERS}:JsonFile"));
 
