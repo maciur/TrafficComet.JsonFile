@@ -11,7 +11,7 @@ Install-Package TrafficComet.JsonFile.LogWriter
 ```csharp 
 public class Startup
 {
-  public IConfiguration Configuration { get; }
+  	public IConfiguration Configuration { get; }
   
 	public void ConfigureServices(IServiceCollection services)
 	{
@@ -32,7 +32,7 @@ public class Startup
 "TrafficComet": {
     "Generator": {
       "ClientId": {
-        "CookieName": "Cookie name where Traffic Comet will store ClientId",
+        "CookieName": "Name of cookie where Traffic Comet will store ClientId",
         "HeaderName": "Name of header where Traffic Comet will read ClientId"
       },
       "TraceId": {
